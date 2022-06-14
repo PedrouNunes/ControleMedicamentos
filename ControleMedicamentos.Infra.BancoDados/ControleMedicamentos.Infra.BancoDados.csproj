@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ModuloFuncionario\**" />
+    <Compile Remove="ModuloRequisicao\**" />
+    <EmbeddedResource Remove="ModuloFuncionario\**" />
+    <EmbeddedResource Remove="ModuloRequisicao\**" />
+    <None Remove="ModuloFuncionario\**" />
+    <None Remove="ModuloRequisicao\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControleMedicamentos.Dominio\ControleMedicamentos.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>
