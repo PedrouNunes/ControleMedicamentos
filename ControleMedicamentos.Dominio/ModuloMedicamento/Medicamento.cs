@@ -28,5 +28,8 @@ namespace ControleMedicamentos.Dominio.ModuloMedicamento
             Requisicoes = new List<Requisicao>();
         }
 
+        public Medicamento()
+        {
+        }
     }
 }
