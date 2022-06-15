@@ -7,13 +7,12 @@ using System.Data.SqlClient;
 
 namespace ControleMedicamento.Infra.BancoDados.ModuloMedicamento
 {
-    internal class RepositorioMedicamentoEmBancoDados
+    public class RepositorioMedicamentoEmBancoDados
     {
         private const string enderecoBanco =
-             "Data Source=(LocalDB)\\MSSqlLocalDB;" +
-             "Initial Catalog=ControleDeMedicamentosDB;" +
-             "Integrated Security=True;" +
-             "Pooling=False";
+             @"Data Source=(LOCALDB)\MSSQLLOCALDB;
+              Initial Catalog=ControleMedicamentosDb;
+              Integrated Security=True";
 
         #region SQL Queries
 
