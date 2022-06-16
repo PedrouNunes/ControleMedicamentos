@@ -34,7 +34,7 @@ namespace ControleMedicamentos.Infra.BancoDados.Tests.ModuloFornecedor
             var fornecedorEncontrado = repositorio.SelecionarPorId(fornecedor.Id);
 
             Assert.IsNotNull(fornecedorEncontrado);
-            // Assert.AreEqual(fornecedor, fornecedorEncontrado);
+            Assert.AreEqual(fornecedor, fornecedorEncontrado);
         }
 
         [TestMethod]
@@ -56,7 +56,7 @@ namespace ControleMedicamentos.Infra.BancoDados.Tests.ModuloFornecedor
             var pacienteEncontrado = repositorio.SelecionarPorId(fornecedor.Id);
 
             Assert.IsNotNull(pacienteEncontrado);
-           // Assert.AreEqual(fornecedor, pacienteEncontrado);
+            Assert.AreEqual(fornecedor, pacienteEncontrado);
         }
 
         [TestMethod]
@@ -84,32 +84,32 @@ namespace ControleMedicamentos.Infra.BancoDados.Tests.ModuloFornecedor
 
             //assert
             Assert.IsNotNull(pacienteEncontrado);
-           // Assert.AreEqual(fornecedor, pacienteEncontrado);
+            Assert.AreEqual(fornecedor, pacienteEncontrado);
         }
 
-        //[TestMethod]
-        //public void Deve_selecionar_todos_os_fornecedores()
-        //{
-        //    //arrange
-        //    var p01 = new Fornecedor("Messi", "321654987", "m10@gmail.com", "Lages", "SC");
-        //    var p02 = new Fornecedor("Arrasdca", "321654987", "arrasca@gmail.com", "Lages", "SC");
-        //    var p03 = new Fornecedor("Cristiano", "321654987", "crt@gmail.com", "Lages", "SC");
+        [TestMethod]
+        public void Deve_selecionar_todos_os_fornecedores()
+        {
+            //arrange
+            var p01 = new Fornecedor("Messi", "321654987", "m10@gmail.com", "Lages", "SC");
+            var p02 = new Fornecedor("Arrasdca", "321654987", "arrasca@gmail.com", "Lages", "SC");
+            var p03 = new Fornecedor("Cristiano", "321654987", "crt@gmail.com", "Lages", "SC");
 
-        //    var repositorio = new RepositorioFornecedorEmBancoDeDados();
-        //    repositorio.Inserir(p01);
-        //    repositorio.Inserir(p02);
-        //    repositorio.Inserir(p03);
+            var repositorio = new RepositorioFornecedorEmBancoDeDados();
+            repositorio.Inserir(p01);
+            repositorio.Inserir(p02);
+            repositorio.Inserir(p03);
 
-        //    //action
-        //    var fornecedores = repositorio.SelecionarTodos();
+            //action
+            var fornecedores = repositorio.SelecionarTodos();
 
-        //    //assert
+            //assert
 
-        //    Assert.AreEqual(3, fornecedores.Count);
+            Assert.AreEqual(3, fornecedores.Count);
 
-        //    Assert.AreEqual(p01.Nome, fornecedores[0].Nome);
-        //    Assert.AreEqual(p02.Nome, fornecedores[1].Nome);
-        //    Assert.AreEqual(p03.Nome, fornecedores[2].Nome);
-        //}
+            Assert.AreEqual(p01.Nome, fornecedores[0].Nome);
+            Assert.AreEqual(p02.Nome, fornecedores[1].Nome);
+            Assert.AreEqual(p03.Nome, fornecedores[2].Nome);
+        }
     }
 }
