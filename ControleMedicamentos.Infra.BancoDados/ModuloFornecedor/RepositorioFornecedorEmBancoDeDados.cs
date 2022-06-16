@@ -75,7 +75,7 @@ namespace ControleMedicamentos.Infra.BancoDados.ModuloFornecedor
                     [CIDADE],
                     [ESTADO]
 	            FROM 
-		            [TBPACIENTE]";
+		            [TBFORNECEDOR]";
         #endregion
 
         public ValidationResult Inserir(Fornecedor fornecedor)

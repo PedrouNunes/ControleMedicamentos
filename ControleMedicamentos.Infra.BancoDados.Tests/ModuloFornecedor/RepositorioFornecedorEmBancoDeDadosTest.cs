@@ -91,25 +91,25 @@ namespace ControleMedicamentos.Infra.BancoDados.Tests.ModuloFornecedor
         public void Deve_selecionar_todos_os_fornecedores()
         {
             //arrange
-            var p01 = new Fornecedor("Messi", "321654987", "m10@gmail.com", "Lages", "SC");
-            var p02 = new Fornecedor("Arrasdca", "321654987", "arrasca@gmail.com", "Lages", "SC");
-            var p03 = new Fornecedor("Cristiano", "321654987", "crt@gmail.com", "Lages", "SC");
+            var f01 = new Fornecedor("Pedro da Silva", "321654987", "pedro@gmail.com", "São José", "SC");
+            var f02 = new Fornecedor("João da Silva", "321654987", "joao@gmail.com", "Floripa", "SC");
+            var f03 = new Fornecedor("Mario da Silva", "321654987", "mario@gmail.com", "Lages", "SC");
 
             var repositorio = new RepositorioFornecedorEmBancoDeDados();
-            repositorio.Inserir(p01);
-            repositorio.Inserir(p02);
-            repositorio.Inserir(p03);
+            repositorio.Inserir(f01);
+            repositorio.Inserir(f02);
+            repositorio.Inserir(f03);
 
             //action
-            var fornecedores = repositorio.SelecionarTodos();
+            var fornecdores = repositorio.SelecionarTodos();
 
             //assert
 
-            Assert.AreEqual(3, fornecedores.Count);
+            Assert.AreEqual(3, fornecdores.Count);
 
-            Assert.AreEqual(p01.Nome, fornecedores[0].Nome);
-            Assert.AreEqual(p02.Nome, fornecedores[1].Nome);
-            Assert.AreEqual(p03.Nome, fornecedores[2].Nome);
+            Assert.AreEqual(f01.Nome, fornecdores[0].Nome);
+            Assert.AreEqual(f02.Nome, fornecdores[1].Nome);
+            Assert.AreEqual(f03.Nome, fornecdores[2].Nome);
         }
     }
 }
